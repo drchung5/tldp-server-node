@@ -25,6 +25,7 @@ const eventController = {
     })
   },
 
+  // POST /api/events
   postEvent: function (req, res) {
     Event.create({ EVENT_CODE: req.body.code, TITLE: req.body.title, DESCRIPTION: req.body.description}).then(
       (e) => { 
@@ -41,7 +42,7 @@ const eventController = {
       if(err) {
         res.sendStatus(500)
       } else {
-        res.status(200)
+        res.sendStatus(200)
       }
     })
   }
