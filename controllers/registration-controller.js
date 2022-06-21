@@ -41,11 +41,11 @@ const registrationController = {
 
   // DELETE /api/registrations/:registration_id
   deleteRegistrationById: function(req, res) {
-    Registration.deleteOne({'EVENT_ID': req.params.registration_id}, function(err){
+    Registration.deleteOne({'REGISTRATION_ID': req.params.registration_id}, function(err){
       if(err) {
         res.sendStatus(500)
       } else {
-        res.status(200)
+        res.sendStatus(200)
       }
     })
   }
