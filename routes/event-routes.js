@@ -14,7 +14,7 @@ eventRouter.post('/', function(req, res) {
   eventController.postEvent(req, res)
 })
 
-eventRouter.delete('/', function(req, res) {
+eventRouter.delete('/:event_id', function(req, res) {
   eventController.deleteEventByID(req, res)
 })
 
